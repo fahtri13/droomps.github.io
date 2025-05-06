@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pesan Anonim</title>
+</head>
+<body>
+    <h1>Kirim Pesan Anonim</h1>
+    <textarea id="pesan" rows="4" cols="50"></textarea><br><br>
+    <button onclick="kirimPesan()">Kirim</button><br><br>
+    <div id="daftarPesan"></div>
+
+    <script>
+        function kirimPesan() {
+            var pesan = document.getElementById("pesan").value;
+            var daftarPesan = document.getElementById("daftarPesan");
+            daftarPesan.innerHTML += "<p>" + pesan + "</p>";
+            document.getElementById("pesan").value = ""; // Bersihkan textarea
+        }
+    </script>
+</body>
+</html>
